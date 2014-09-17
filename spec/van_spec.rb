@@ -1,6 +1,7 @@
 require 'van'
 
 describe Van do
+	
 	it "the van should be able to pickup bikes" do
 		broken_bikes = double :broken_bikes
 		bikes = double :bikes
