@@ -3,7 +3,7 @@ module BikeContainer
   DEFAULT_CAPACITY = 10
 
   def bikes
-      @bikes ||= []
+    @bikes ||= []
   end
 
   def capacity
@@ -23,8 +23,13 @@ module BikeContainer
   	bikes << bike
   end
 
-  def release(bike)
-  	bikes.delete(bike)
+  def release(bike = nil)
+    if bike
+      raise "Bike mis-match cant release as does not exist" if !bikes.include?(bike)
+      bikes.delete(bike)
+    else  
+      bikes.shift
+    end
   end
 
   def full?
