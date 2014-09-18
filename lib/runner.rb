@@ -1,0 +1,6 @@
+require 'bike_container'
+require 'bike'
+require 'person'
+require 'garage'
+require 'docking_station'
+require 'bike_container'
